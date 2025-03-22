@@ -4,7 +4,7 @@ export async function POST(request: Request): Promise<Response> {
   const formData = await request.text();
   console.log("Form submitted:", formData);
 
-  // ✅ Fixed redirect
+  // ✅ Use a RELATIVE redirect (best and always works)
   return Response.redirect("/thank-you", 302);
 }
 
