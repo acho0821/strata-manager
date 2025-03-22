@@ -1,0 +1,11 @@
+{
+    "rewrites": [
+      { "source": "/form", "destination": "/api/report-issue" }
+    ],
+    "redirects": [
+      { "source": "/old-contact", "destination": "/contact", "permanent": true }
+    ],
+    "regions": ["syd1"],
+    "buildCommand": "next build"
+  }
+  
