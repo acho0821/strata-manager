@@ -4,7 +4,8 @@ export async function POST(request: Request): Promise<Response> {
   const formData = await request.text();
   console.log("Form submitted:", formData);
 
-  return Response.redirect("https://sunset-apartments.vercel.app/thank-you", 302);
+  // ✅ Fixed redirect
+  return Response.redirect("/thank-you", 302);
 }
 
 export async function GET(): Promise<Response> {
