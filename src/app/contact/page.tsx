@@ -1,9 +1,24 @@
-export default function Owners() {
+// src/app/contact/page.tsx
+export default function ContactPage() {
     return (
-      <main className="p-6">
-        <h1 className="text-3xl font-bold">Owners Dashboard</h1>
-        <p className="mt-4">Here, you can manage information about the different points of contact.</p>
-      </main>
+      <div style={{ padding: "2rem" }}>
+        <h1>Contact Sunset Apartments</h1>
+        <form action="/api/report-issue" method="POST">
+          <div>
+            <label>Name:</label><br />
+            <input type="text" name="name" required />
+          </div>
+          <div>
+            <label>Unit Number:</label><br />
+            <input type="text" name="unit" required />
+          </div>
+          <div>
+            <label>Issue Description:</label><br />
+            <textarea name="issue" rows={4} required></textarea>
+          </div>
+          <button type="submit" style={{ marginTop: "1rem" }}>Submit Issue</button>
+        </form>
+      </div>
     );
   }
   
